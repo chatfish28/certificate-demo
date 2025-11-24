@@ -6,53 +6,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    body {
+    * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
         font-family: "Microsoft YaHei", sans-serif;
         background: #fff;
+        color: #000;
     }
 
     .container {
         max-width: 900px;
-        margin: 40px auto;
-        padding: 0 20px;
+        margin: 32px auto;
+        padding: 0 24px;
     }
 
-    h1 {
+    /* 标题部分：左边加粗，右边不加粗 */
+    .title {
         text-align: center;
         font-size: 22px;
-        margin-bottom: 40px;
-        font-weight: 600;
+        margin-bottom: 22px;
+        line-height: 1.4;
     }
 
+    .title-bold {
+        font-weight: 600; /* 加粗 */
+    }
+
+    .title-normal {
+        font-weight: normal; /* 不加粗 */
+    }
+
+    /* 每行 */
     .line {
         font-size: 16px;
         margin: 12px 0;
     }
 
+    /* 字段名（蓝色） */
     .label {
-        color: #333;
+        color: #0076c8;
         font-weight: bold;
     }
 
+    /* 内容 = 黑色 */
     .value {
-        color: #0b74d8;
+        color: #000000;
         margin-left: 6px;
     }
 
+    /* 培训结果 红色 不加粗 */
     .value-red {
-        color: red;
-        font-weight: bold;
+        color: #d70000;
+        font-weight: normal; /* ❗不加粗 */
         margin-left: 6px;
     }
-
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>天津市专业技术人员继续教育网（证书查询）</h1>
+
+    <div class="title">
+        <span class="title-bold">天津市专业技术人员继续教育网</span>
+        <span class="title-normal">（证书查询）</span>
+    </div>
 
     <div class="line"><span class="label">用户名：</span><span class="value">Sunming</span></div>
 
@@ -67,6 +88,7 @@
     <div class="line"><span class="label">培训计划：</span><span class="value">2019年天津市专技人员继续教育公需课</span></div>
 
     <div class="line"><span class="label">培训结果：</span><span class="value-red">您已获得10学时，其中必修课10学时！</span></div>
+
 </div>
 
 </body>
