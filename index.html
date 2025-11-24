@@ -24,7 +24,7 @@
         padding: 0 24px;
     }
 
-    /* 标题部分：左边加粗，右边不加粗 */
+    /* 标题部分 */
     .title {
         text-align: center;
         font-size: 22px;
@@ -33,36 +33,34 @@
     }
 
     .title-bold {
-        font-weight: 600; /* 加粗 */
+        font-weight: 600;
     }
 
     .title-normal {
-        font-weight: normal; /* 不加粗 */
+        font-weight: normal;
     }
 
-    /* 每行 */
+    /* 每行采用两列结构，左列固定宽度 */
     .line {
+        display: flex;
         font-size: 16px;
         margin: 12px 0;
     }
 
-    /* 字段名（蓝色） */
     .label {
+        width: 110px;       /* 固定宽度 = 完全对齐 */
         color: #0076c8;
         font-weight: bold;
+        flex-shrink: 0;
     }
 
-    /* 内容 = 黑色 */
     .value {
         color: #000000;
-        margin-left: 6px;
     }
 
-    /* 培训结果 红色 不加粗 */
     .value-red {
         color: #d70000;
-        font-weight: normal; /* ❗不加粗 */
-        margin-left: 6px;
+        font-weight: normal; /* 不加粗 */
     }
 </style>
 </head>
@@ -75,19 +73,40 @@
         <span class="title-normal">（证书查询）</span>
     </div>
 
-    <div class="line"><span class="label">用户名：</span><span class="value">Sunming</span></div>
+    <div class="line">
+        <span class="label">用户名：</span>
+        <span class="value">Sunming</span>
+    </div>
 
-    <div class="line"><span class="label">真实姓名：</span><span class="value">孙明</span></div>
+    <div class="line">
+        <span class="label">真实姓名：</span>
+        <span class="value">孙明</span>
+    </div>
 
-    <div class="line"><span class="label">身份证号：</span><span class="value">12010719820102218X</span></div>
+    <div class="line">
+        <span class="label">身份证号：</span>
+        <span class="value">12010719820102218X</span>
+    </div>
 
-    <div class="line"><span class="label">所属组织：</span><span class="value">天津市塘沽区第一中学</span></div>
+    <div class="line">
+        <span class="label">所属组织：</span>
+        <span class="value">天津市塘沽区第一中学</span>
+    </div>
 
-    <div class="line"><span class="label">工作单位：</span><span class="value">塘沽一中初中校区</span></div>
+    <div class="line">
+        <span class="label">工作单位：</span>
+        <span class="value">塘沽一中初中校区</span>
+    </div>
 
-    <div class="line"><span class="label">培训计划：</span><span class="value">2019年天津市专技人员继续教育公需课</span></div>
+    <div class="line">
+        <span class="label">培训计划：</span>
+        <span class="value">2019年天津市专技人员继续教育公需课</span>
+    </div>
 
-    <div class="line"><span class="label">培训结果：</span><span class="value-red">您已获得10学时，其中必修课10学时！</span></div>
+    <div class="line">
+        <span class="label">培训结果：</span>
+        <span class="value-red">您已获得10学时，其中必修课10学时！</span>
+    </div>
 
 </div>
 
