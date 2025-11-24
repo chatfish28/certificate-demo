@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" type="image/png" href="favicon.png">
+
 <style>
     * {
         margin: 0;
@@ -17,51 +18,52 @@
         font-family: "Microsoft YaHei", sans-serif;
         background: #fff;
         color: #000;
+        font-size: 15px;        /* 正文字体略小一点 */
     }
 
     .container {
         max-width: 900px;
-        margin: 32px auto;
-        padding: 0 24px;
-        display: none; /* 验证通过才显示 */
+        margin: 24px auto;
+        padding: 0 20px;
+        display: none;          /* 通过参数检查后再显示 */
     }
 
     .error {
         text-align: center;
-        padding: 100px 20px;
-        font-size: 18px;
+        padding: 80px 20px;
+        font-size: 16px;
         color: red;
         display: none;
     }
 
+    /* 标题：只比正文略大一点 */
     .title {
         text-align: center;
-        font-size: 22px;
-        margin-bottom: 22px;
+        font-size: 18px;        /* 标题比正文稍大，而不是很大 */
+        margin-bottom: 18px;
         line-height: 1.4;
     }
 
-    .title-bold {
-        font-weight: 600;
-    }
+    .title-bold   { font-weight: 600; }
+    .title-normal { font-weight: normal; }
 
-    .title-normal {
-        font-weight: normal;
-    }
-
+    /* 每行一行，两列 */
     .line {
         display: flex;
-        font-size: 16px;
-        margin: 12px 0;
+        font-size: 15px;
+        margin: 8px 0;
+        line-height: 24px;
     }
 
+    /* 左侧字段名：减小宽度，让两栏更靠近 */
     .label {
-        width: 110px;
+        width: 90px;            /* 原来 110px，现在更窄 */
         color: #0076c8;
         font-weight: bold;
         flex-shrink: 0;
     }
 
+    /* 右侧内容 */
     .value {
         color: #000000;
     }
