@@ -5,9 +5,7 @@
 <title>登录页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- favicon 图标 -->
 <link rel="icon" type="image/png" href="favicon.png">
-
 <style>
     * {
         margin: 0;
@@ -25,7 +23,7 @@
         max-width: 900px;
         margin: 32px auto;
         padding: 0 24px;
-        display: none; /* 初始隐藏，参数正确后显示 */
+        display: none; /* 验证通过才显示 */
     }
 
     .error {
@@ -36,7 +34,6 @@
         display: none;
     }
 
-    /* 标题部分 */
     .title {
         text-align: center;
         font-size: 22px;
@@ -44,10 +41,14 @@
         line-height: 1.4;
     }
 
-    .title-bold { font-weight: 600; }   /* “天津市专业技术人员继续教育网” 加粗 */
-    .title-normal { font-weight: normal; } /* “（证书查询）” 不加粗 */
+    .title-bold {
+        font-weight: 600;
+    }
 
-    /* 两列布局，左字段固定宽度 */
+    .title-normal {
+        font-weight: normal;
+    }
+
     .line {
         display: flex;
         font-size: 16px;
@@ -67,17 +68,15 @@
 
     .value-red {
         color: #d70000;
-        font-weight: normal; /* 不加粗 */
+        font-weight: normal;
     }
 </style>
 </head>
 
 <body>
 
-<!-- 错误提示（参数不对时显示） -->
-<div class="error" id="errBox">无权限访问（缺少或错误的 user_name 参数）</div>
+<div class="error" id="errBox">无权限访问</div>
 
-<!-- 主体内容（参数正确才显示） -->
 <div class="container" id="mainBox">
 
     <div class="title">
@@ -95,13 +94,11 @@
 
 </div>
 
-<!-- 参数校验脚本：必须 user_name=Sunming 才显示页面 -->
 <script>
     const params = new URLSearchParams(window.location.search);
     const userName = params.get("user_name");
-    const allowedUser = "Sunming";
 
-    if (userName === allowedUser) {
+    if (userName === "Sunming") {
         document.getElementById("mainBox").style.display = "block";
     } else {
         document.getElementById("errBox").style.display = "block";
